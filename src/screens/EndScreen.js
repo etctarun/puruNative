@@ -1,13 +1,6 @@
 import React from 'react';
 import {StackActions} from '@react-navigation/native';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Button,
-  TouchableOpacity,
-  Platform,
-} from 'react-native';
+import {StyleSheet, View, Text, TouchableOpacity, Platform} from 'react-native';
 
 //Color import
 import Colors from '../constants/colors';
@@ -45,6 +38,7 @@ const EndScreen = (props) => {
   );
 };
 
+//Redux
 const mapStateToProps = (state) => ({
   name: state.name.text,
   age: state.age.text,

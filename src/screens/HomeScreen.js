@@ -1,10 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   View,
   Text,
   TextInput,
-  Button,
   TouchableOpacity,
   ToastAndroid,
 } from 'react-native';
@@ -32,7 +31,7 @@ const HomeScreen = (props) => {
       ToastAndroid.SHORT,
       ToastAndroid.CENTER,
     );
-    props.navigation.navigate('Swipe');
+    props.navigation.navigate('Swipe'); //to navigate to next screen in stack
   };
 
   return (
@@ -72,6 +71,7 @@ const HomeScreen = (props) => {
   );
 };
 
+//Redux
 const mapDispatchToProps = (dispatch) => {
   return {
     setNameText: (name) => dispatch(setName(name)),

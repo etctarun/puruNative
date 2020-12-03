@@ -1,16 +1,17 @@
 import React from 'react';
 import {StyleSheet, View, Text, ToastAndroid, Button} from 'react-native';
 
+//Swipe Button imports
+import SwipeButton from 'rn-swipe-button';
+import arrowRight from '../assets/arrow-right.png';
+
 //Color import
 import Colors from '../constants/colors';
-
-import SwipeButton from 'rn-swipe-button';
 
 //import butttons
 import Button1 from '../components/Button1';
 import Button2 from '../components/Button2';
 import Button3 from '../components/Button3';
-import arrowRight from '../assets/arrow-right.png';
 
 //Redux
 import {connect} from 'react-redux';
@@ -46,6 +47,7 @@ const SwipeScreen = (props) => {
   );
 };
 
+//Redux
 const mapStateToProps = (state) => ({
   text: state.name.text,
 });

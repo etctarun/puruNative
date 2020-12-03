@@ -17,3 +17,4 @@ $npm run flow-stop
 ### NativeModules
 
 android custom native module
+android -> app -> src -> main -> java -> com -> {project-name} -> CustomModule.java
