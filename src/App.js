@@ -6,11 +6,15 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {StyleSheet, View, Text, Alert, StatusBar} from 'react-native';
 
+//Color import
+import Colors from './constants/colors';
+
 //REDUX
 import {Provider} from 'react-redux';
 import configureStore from './store/store';
 const store = configureStore();
 
+//Screen Import
 import EndScreen from './screens/EndScreen';
 import HomeScreen from './screens/HomeScreen';
 import SwipeScreen from './screens/SwipeScreen';
@@ -38,25 +42,41 @@ const App = () => {
         {/* {sim
         ? Alert.alert('Alert', 'Emulator detected', [{text: 'ok'}])
         : Alert.alert('Alert', 'No emulator detected', [{text: 'ok'}])} */}
-        <StatusBar barStyle="light-content" />
+        <StatusBar
+          barStyle="light-content"
+          translucent
+          backgroundColor={Colors.primaryColor}
+        />
 
         <Stack.Navigator
           initialRouteName="Home"
-          screenOptions={{gestureEnabled: false}}>
+          screenOptions={{
+            gestureEnabled: false,
+            headerStyle: {
+              backgroundColor: Colors.primaryColor,
+            },
+            headerTintColor: Colors.light,
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+          headerMode="float">
           <Stack.Screen
             name="Home"
             component={HomeScreen}
-            options={{title: 'Home'}}
+            options={{
+              title: 'Home',
+            }}
           />
           <Stack.Screen
             name="Swipe"
             component={SwipeScreen}
-            options={{title: 'Swipe'}}
+            options={{title: 'Intro'}}
           />
           <Stack.Screen
             name="End"
             component={EndScreen}
-            options={{title: 'End'}}
+            options={{title: 'Details'}}
           />
         </Stack.Navigator>
       </NavigationContainer>
