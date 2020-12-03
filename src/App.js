@@ -1,6 +1,5 @@
 import 'react-native-gesture-handler';
 import React, {useEffect, useState} from 'react';
-import DeviceInfo from 'react-native-device-info';
 import {enableScreens} from 'react-native-screens';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
