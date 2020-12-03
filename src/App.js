@@ -34,14 +34,14 @@ const App = () => {
 
   useEffect(() => {
     checkSimulator();
-  });
+  }, []);
 
   return (
     <Provider store={store}>
       <NavigationContainer>
-        {/* {sim
-        ? Alert.alert('Alert', 'Emulator detected', [{text: 'ok'}])
-        : Alert.alert('Alert', 'No emulator detected', [{text: 'ok'}])} */}
+        {sim
+          ? Alert.alert('Alert', 'Emulator detected', [{text: 'ok'}])
+          : Alert.alert('Alert', 'No emulator detected', [{text: 'ok'}])}
         <StatusBar
           barStyle="light-content"
           translucent

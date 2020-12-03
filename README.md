@@ -1,6 +1,19 @@
+### install packages
+
 $npm install
 
-$react-native run-android - to run
+### run after opening emulator/device(USB)
 
-$npm run flow             -for static type checking
-$npm run flow-stop -to stop flow server
+$react-native run-android
+
+### for static type checking
+
+$npm run flow
+
+### to stop flow server
+
+$npm run flow-stop
+
+### NativeModules
+
+android custom native module
